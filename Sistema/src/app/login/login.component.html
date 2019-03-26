@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="container">
+    <div class="container">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 center">
+            <i class="medium material-icons" style="margin-top: 2px;">person_outline</i>
+          </div>
+          <div class="col s12 center"><h4>Login de Egresso</h4></div>
+          <div class="col s12 center">
+            <form action="" class="col s12 center">
+              <div class="row">
+                <div class="input-field s12">
+                  <input placeholder="fulano@gmail.com" id="email" type="email" class="validate"/>
+                  <label for="email">Email</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field s12">
+                  <input id="senha" type="password" class="validate" />
+                  <label for="senha">Senha</label>
+                </div>
+              </div>
+              <div class="row left-align">
+                Não tem uma senha? <a [routerLink]="['/signup']">Cadastre-se!</a>
+              </div>
+              <div class="row left-align">
+                <button class="btn waves-effect waves-light green darken-1 " type="submit" name="action">Submit<i class="material-icons right">send</i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

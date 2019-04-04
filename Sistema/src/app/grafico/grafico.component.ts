@@ -26,11 +26,18 @@ export class GraficoComponent implements OnInit {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
   };
 
+  // pie
+  showLabels = true;
+  explodeSlices = false;
+  doughnut = false;
+
   constructor() {
     Object.assign(this, { single, multi })
   }
 
   ngOnInit() {
   }
+
+  value: any
 
 }

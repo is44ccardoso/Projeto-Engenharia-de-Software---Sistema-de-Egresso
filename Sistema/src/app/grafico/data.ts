@@ -1,16 +1,12 @@
 export let single = [
   {
-    "name": "Germany",
-    "value": 8940000
+    "name": "Empregados na Área",
+    "value": 84
   },
   {
-    "name": "USA",
-    "value": 5000000
+    "name": "Empregados fora da Área",
+    "value": 16
   },
-  {
-    "name": "France",
-    "value": 7200000
-  }
 ];
 
 export let multi = [

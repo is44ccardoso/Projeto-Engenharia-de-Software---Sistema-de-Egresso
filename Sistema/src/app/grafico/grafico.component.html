@@ -1,14 +1,64 @@
-<ngx-charts-bar-vertical-2d
-  [view]="view"
-  [scheme]="colorScheme"
-  [results]="multi"
-  [gradient]="gradient"
-  [xAxis]="showXAxis"
-  [yAxis]="showYAxis"
-  [legend]="showLegend"
-  [showXAxisLabel]="showXAxisLabel"
-  [showYAxisLabel]="showYAxisLabel"
-  [xAxisLabel]="xAxisLabel"
-  [yAxisLabel]="yAxisLabel"
-  (select)="onSelect($event)">
-</ngx-charts-bar-vertical-2d>
+<div class="row">
+  <div class="col">
+    <form>
+      <div class="form-group">
+        <label for="Graficos">Faixa salarial</label>
+        <select
+          name="Graficos"
+          id="Graficos"
+          class="form-control form-control-sm"
+        >
+          <option>Agronomia</option>
+          <option>Biologia</option>
+          <option>Engenharia Civil</option>
+          <option>Engenharia de Alimentos</option>
+          <option>Engenharia Ambiental</option>
+        </select>
+      </div>
+    </form>
+    <div class="d-flex justify-content-center">
+      <ngx-charts-bar-vertical-2d
+        [view]="view"
+        [scheme]="colorScheme"
+        [results]="multi"
+        [gradient]="gradient"
+        [xAxis]="showXAxis"
+        [yAxis]="showYAxis"
+        [legend]="showLegend"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel"
+        (select)="onSelect($event)"
+      >
+      </ngx-charts-bar-vertical-2d>
+    </div>
+  </div>
+  <div class="col">
+    <form>
+      <div class="form-group">
+        <label for="Graficos">Egresso empregados na área</label>
+        <select [(ngModel)]="value"
+          name="Graficos"
+          id="Graficos"
+          class="form-control form-control-sm"
+        >
+        <option [value]="1">Agronomia</option>
+        <option [value]="2">Biologia</option>
+        <option [value]="3">Engenharia Civil</option>
+        <option [value]="4">Engenharia de Alimentos</option>
+        <option [value]="5">Engenharia Ambiental</option>
+        </select>
+      </div>
+    </form>
+    <div class="d-flex justify-content-center" *ngIf="value==1">
+        <ngx-charts-advanced-pie-chart
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="single"
+      [gradient]="gradient"
+      (select)="onSelect($event)">
+    </ngx-charts-advanced-pie-chart>
+    </div>
+  </div>
+</div>

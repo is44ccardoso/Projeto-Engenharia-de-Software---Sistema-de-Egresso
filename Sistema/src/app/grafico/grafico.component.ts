@@ -9,6 +9,7 @@ import { single, multi } from './data';
 export class GraficoComponent implements OnInit {
   single: any[];
   multi: any[];
+  value: any;
 
   view: any[] = [700, 400];
 
@@ -17,10 +18,11 @@ export class GraficoComponent implements OnInit {
   showYAxis = true;
   gradient = false;
   showLegend = true;
+  xAxisLabel = '';
+  agro = 'agro';
   showXAxisLabel = true;
-  xAxisLabel = 'Country';
   showYAxisLabel = true;
-  yAxisLabel = 'Population';
+  yAxisLabel = 'Nº de Pessoas';
 
   colorScheme = {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
@@ -32,12 +34,13 @@ export class GraficoComponent implements OnInit {
   doughnut = false;
 
   constructor() {
-    Object.assign(this, { single, multi })
+    Object.assign(this, { single, multi });
+
   }
 
   ngOnInit() {
   }
 
-  value: any
+
 
 }

@@ -11,71 +11,15 @@ export let single = [
 
 export let multi = [
   {
-    "name": "Germany",
-    "series": [
-      {
-        "name": "2010",
-        "value": 40632
-      },
-      {
-        "name": "2000",
-        "value": 36953
-      },
-      {
-        "name": "1990",
-        "value": 31476
-      }
-    ]
+    "name": "0 a 2 Salários",
+    "value": 55
   },
   {
-    "name": "United States",
-    "series": [
-      {
-        "name": "2010",
-        "value": 49737
-      },
-      {
-        "name": "2000",
-        "value": 45986
-      },
-      {
-        "name": "1990",
-        "value": 37060
-      }
-    ]
+    "name": "3 a 5 Salários",
+    "value": 168
   },
   {
-    "name": "France",
-    "series": [
-      {
-        "name": "2010",
-        "value": 36745
-      },
-      {
-        "name": "2000",
-        "value": 34774
-      },
-      {
-        "name": "1990",
-        "value": 29476
-      }
-    ]
+    "name": "mais de 5 Salários",
+    "value": 257
   },
-  {
-    "name": "United Kingdom",
-    "series": [
-      {
-        "name": "2010",
-        "value": 36240
-      },
-      {
-        "name": "2000",
-        "value": 32543
-      },
-      {
-        "name": "1990",
-        "value": 26424
-      }
-    ]
-  }
 ];

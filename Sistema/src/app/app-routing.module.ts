@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'signup', loadChildren: './signup/signup.module#SignupModule'},
   { path: 'grafico', loadChildren: './grafico/grafico.module#GraficoModule'},
   { path: 'survey', loadChildren: './survey/survey.module#SurveyModule'},
+  { path: 'form', loadChildren: './form/form.module#FormModule' },
   { path: '', pathMatch: 'full', redirectTo: '/home'}
 ];
 

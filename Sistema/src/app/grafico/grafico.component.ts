@@ -19,7 +19,7 @@ export class GraficoComponent implements OnInit {
   gradient = false;
   showLegend = true;
   xAxisLabel = '';
-  agro = 'agro';
+  agro = 'Agronomia';
   showXAxisLabel = true;
   showYAxisLabel = true;
   yAxisLabel = 'Nº de Pessoas';

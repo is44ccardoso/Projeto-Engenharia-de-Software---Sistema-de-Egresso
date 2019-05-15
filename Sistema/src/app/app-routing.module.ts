@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'grafico', loadChildren: './grafico/grafico.module#GraficoModule'},
   { path: 'survey', loadChildren: './survey/survey.module#SurveyModule'},
   { path: 'form', loadChildren: './form/form.module#FormModule' },
+  { path: 'profile', loadChildren: './profile/profile.module#ProfileModule' },
   { path: '', pathMatch: 'full', redirectTo: '/home'}
 ];
 

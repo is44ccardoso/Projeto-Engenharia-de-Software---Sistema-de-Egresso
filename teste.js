@@ -1,4 +1,5 @@
 //https://www.geeksforgeeks.org/lca-for-general-or-n-ary-trees-sparse-matrix-dp-approach-onlogn-ologn/
+//https://scotch.io/tutorials/getting-started-with-node-express-and-postgres-using-sequelize#toc-project-setup
 var path = []
 path[1] = []
 path[2] = []

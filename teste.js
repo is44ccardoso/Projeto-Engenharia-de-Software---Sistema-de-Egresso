@@ -1,3 +1,4 @@
+//https://www.geeksforgeeks.org/lca-for-general-or-n-ary-trees-sparse-matrix-dp-approach-onlogn-ologn/
 var path = []
 path[1] = []
 path[2] = []

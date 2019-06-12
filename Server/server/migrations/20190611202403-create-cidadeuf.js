@@ -9,10 +9,12 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       cidade: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false,
       },
       estado: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false,
       },
       ibgemunicipio: {
         type: Sequelize.INTEGER,

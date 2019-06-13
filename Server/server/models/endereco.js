@@ -30,6 +30,10 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'cidadeuf_id',
       onDelete: 'CASCADE',
     });
+    endereco.hasOne(models.complemento, {
+      foreignKey: 'endr_id',
+      onDelete: 'CASCADE',
+    });
   };
   return endereco;
 };

@@ -22,7 +22,9 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'curso',
   });
   curso.associate = function(models) {
-    // associations can be defined here
+    curso.hasOne(models.usuario, {
+      foreignKey: 'curso_id',
+    });
   };
   return curso;
 };

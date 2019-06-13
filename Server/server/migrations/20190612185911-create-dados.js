@@ -8,6 +8,16 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      usr_id: {
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'usuario',
+          key: 'usr_id',
+          as: 'usr_id',
+        },
+        allowNull: false,
+      },
       pos_grad: {
         type: Sequelize.BOOLEAN,
         allowNull: false,

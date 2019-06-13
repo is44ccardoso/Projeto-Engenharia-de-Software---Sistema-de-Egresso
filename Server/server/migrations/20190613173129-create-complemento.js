@@ -8,6 +8,26 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      usr_id: {
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'usuario',
+          key: 'usr_id',
+          as: 'usr_id',
+        },
+        allowNull: false,
+      },
+      endr_id: {
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'endereco',
+          key: 'endr_id',
+          as: 'endr_id',
+        },
+        allowNull: false,
+      },
       numero: {
         type: Sequelize.STRING,
         allowNull: true,

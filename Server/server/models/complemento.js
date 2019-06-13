@@ -24,7 +24,14 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'complemento',
   });
   complemento.associate = function(models) {
-    // associations can be defined here
+    complemento.belongsTo(models.endereco,{
+      foreignKey: 'endr_id',
+      onDelete: 'CASCADE',
+    });
+    complemento.belongsTo(models.usuario,{
+      foreignKey: 'usr_id',
+      onDelete: 'CASCADE',
+    });
   };
   return complemento;
 };

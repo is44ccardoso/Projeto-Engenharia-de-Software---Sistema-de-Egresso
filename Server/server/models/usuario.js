@@ -36,7 +36,17 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'usuario',
   });
   usuario.associate = function(models) {
-    
+    usuario.hasOne(models.complemento, {
+      foreignKey: 'usr_id',
+      onDelete: 'CASCADE',
+    });
+    usuario.belongsTo(models.curso, {
+      foreignKey: 'curso_id',
+    });
+    usuario.hasOne(models.dados, {
+      foreignKey: 'usr_id',
+      onDelete: 'CASCADE',
+    });
   };
   return usuario;
 };

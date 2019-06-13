@@ -45,7 +45,10 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'dados',
   });
   dados.associate = function(models) {
-    // associations can be defined here
+    dados.belongsTo(models.usuario, {
+      foreignKey: 'usr_id',
+      onDelete: 'CASCADE',
+    });
   };
   return dados;
 };

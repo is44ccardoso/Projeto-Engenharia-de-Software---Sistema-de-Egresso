@@ -1,23 +1,25 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('curso', {
-      curso_id: {
+    return queryInterface.createTable('complemento', {
+      cmp_id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      nome: {
+      numero: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
+        defaultValue: null,
       },
-      data_ini: {
-        type: Sequelize.DATEONLY,
-        allowNull: false,
+      complemento: {
+        type: Sequelize.STRING,
+        allowNull: true,
+        defaultValue: null,
       },
-      data_fim: {
-        type: Sequelize.DATEONLY,
+      telefone: {
+        type: Sequelize.STRING,
         allowNull: false,
       },
       createdAt: {
@@ -31,6 +33,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('curso');
+    return queryInterface.dropTable('complemento');
   }
 };

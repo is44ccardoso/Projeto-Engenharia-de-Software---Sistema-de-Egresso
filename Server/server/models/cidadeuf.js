@@ -1,13 +1,38 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const cidadeuf = sequelize.define('cidadeuf', {
-    cidade: DataTypes.STRING,
-    estado: DataTypes.STRING,
-    ibgemunicipio: DataTypes.INTEGER,
-    ibgeestado: DataTypes.INTEGER,
-    pais: DataTypes.STRING,
-    ibgepais: DataTypes.INTEGER
-  }, {});
+    cidadeuf_id:{
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+    },
+    cidade:{
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    estado:{
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    ibgemunicipio:{
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    ibgeestado:{
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    pais:{
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    ibgepais:{
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    }
+  }, {
+    freezeTableName: true,
+    tableName: 'cidadeuf',
+  });
   cidadeuf.associate = function(models) {
     cidadeuf.hasMany(models.endereco, {
       foreignKey: 'cidadeuf_id',

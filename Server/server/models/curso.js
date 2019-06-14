@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'curso',
   });
   curso.associate = function(models) {
-    curso.hasOne(models.usuario, {
+    curso.hasMany(models.usuario, {
       foreignKey: 'curso_id',
     });
   };

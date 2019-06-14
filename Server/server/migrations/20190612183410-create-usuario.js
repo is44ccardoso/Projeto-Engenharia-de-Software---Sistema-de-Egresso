@@ -8,16 +8,6 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      curso_id: {
-        type: Sequelize.INTEGER,
-        onDelete: 'CASCADE',
-        references: {
-          model: 'curso',
-          key: 'curso_id',
-          as: 'curso_id',
-        },
-        allowNull: false,
-      },
       matricula: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -51,7 +41,17 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      }
+      },
+      curso_id: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'curso',
+          key: 'curso_id',
+          as: 'curso_id',
+        },
+        allowNull: false,
+      },
+
     });
   },
   down: (queryInterface, Sequelize) => {

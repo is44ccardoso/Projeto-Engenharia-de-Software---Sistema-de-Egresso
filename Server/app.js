@@ -18,3 +18,4 @@ app.get('*', (req, res) => res.status(200).send({
 }));
 
 module.exports = app;
+//sequelize model:create --name usuario --attributes matricula:integer,senha:string,nome:string,cpf:string,email:string,usr_tipo:enum('1','2','3')

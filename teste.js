@@ -1,10 +1,10 @@
 //https://www.geeksforgeeks.org/lca-for-general-or-n-ary-trees-sparse-matrix-dp-approach-onlogn-ologn/
 //https://scotch.io/tutorials/getting-started-with-node-express-and-postgres-using-sequelize#toc-project-setup
-var path = []
+let path = []
 path[1] = []
 path[2] = []
-var G = []
-var flag
+let G = []
+let flag
 function LCA(a,b){
     if(a==b) return a
 
@@ -16,9 +16,14 @@ function LCA(a,b){
     flag = false
     DFS(1, 0, 2, 1, b, flag)
 
-    var i=0
-    while(path[1][i] == path[2][i]) i++
-    return path[1][i-1]
+    let i=0
+    console.log(path[1],path[2])
+    while(path[1][i] == path[2][i]){
+        if(path[1][i] === undefined)
+            break
+        i++
+    }
+    return path[1][i] == undefined ? path[1][i-1] : path[1][i-1]
 }
 
 function makeListaAdj(source, target) {
@@ -33,13 +38,14 @@ function makeListaAdj(source, target) {
 }
 
 function DFS(cur, prev, pathNumber, ptr, node, flag) {
+    let i;
     for(i=0;i<G[cur].length;i++){
         if(G[cur][i] != prev && !flag){
             path[pathNumber][ptr] = G[cur][i];
             if(G[cur][i] == node){
                 flag = true
                 path[pathNumber][ptr+1] = -1
-                return;
+                break;
             }
             DFS(G[cur][i], cur, pathNumber, ptr+1, node, flag)
         }
@@ -53,5 +59,5 @@ makeListaAdj(2,5)
 makeListaAdj(2,6)
 makeListaAdj(3,7)
 makeListaAdj(3,8)
-console.log(LCA(4,7))
-console.log(LCA(4,6))
+// console.log(G[5][0])
+console.log(LCA(4,5))

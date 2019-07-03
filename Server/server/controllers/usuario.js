@@ -6,7 +6,7 @@ module.exports = {
         return Usuario
         .create({
             matricula: req.body.matricula,
-            senha: req.body.senha,
+            senha: db.sequelize.fn('PASSWORD', req.body.senha),
             nome: req.body.nome,
             cpf: req.body.cpf,
             email: req.body.email,

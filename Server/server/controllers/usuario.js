@@ -80,22 +80,22 @@ module.exports = {
         })
         .catch(error => res.status(400).send(error));
     },
-    // auth(req,res){
-    //     return Sis_usuario
-    //     .findOne({
-    //         where: {
-    //             usr_login: req.headers.usr_login,
-    //             usr_senha: [db.sequelize.fn('PASSWORD', req.headers.usr_senha)],
-    //         }
-    //     })
-    //     .then(sis_usuario => {
-    //         if(!sis_usuario){
-    //             return res.status(404).send({
-    //                 message: 'Usuario não encontrado',
-    //             });
-    //         }
-    //         return res.status(200).send(sis_usuario);
-    //     })
-    //     .catch(error => res.status(400).send(error));
-    // }
+    auth(req,res){
+        return Usuario
+        .findOne({
+            where: {
+                login: req.headers.login,
+                senha: [db.sequelize.fn('PASSWORD', req.headers.senha)],
+            }
+        })
+        .then(usuario => {
+            if(!usuario){
+                return res.status(404).send({
+                    message: 'Usuario não encontrado',
+                });
+            }
+            return res.status(200).send(usuario);
+        })
+        .catch(error => res.status(400).send(error));
+    }
 };
